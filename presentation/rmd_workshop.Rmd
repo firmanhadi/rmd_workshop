@@ -106,6 +106,19 @@ bibliography <- ReadBib("rmd_workshop_files/bibliography/presentation.bib",
     
 }
 
+
+.pull-left-c1 {
+    float: left;
+    width: 45%;
+    
+}
+
+.pull-right-c2 {
+    float: right;
+    width: 50%;
+    
+}
+
 .medium {
     font-size: 75%
     
