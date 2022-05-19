@@ -295,7 +295,7 @@ s2_probs6_rf <- sits_classify(
 # plot the probabilities
 # RandomForest
 #10
-#plot(s2_probs6_rf)
+plot(s2_probs6_rf)
 
 # Smoothing 
 #RandomForest

@@ -5,7 +5,7 @@ author: "Jane Doe^[Department of Science, University of Random. Email: <jane.doe
 date: "4 March 2020"
 bibliography: "references.bib"
 csl: "apa_7th.csl"
-output: pdf_document
+output: word_document
 link-citations: yes
 numbersections: true
 header-includes:
@@ -169,7 +169,19 @@ Magna porta proin duis in porta ante. Cubilia enim, maecenas risus vestibulum gr
 There are `r nrow(df)` observations in the dataset. Egestas nullam, et mauris inceptos sed scelerisque. Sollicitudin scelerisque in enim sapien pellentesque hendrerit eget cum, tellus. Nam leo volutpat faucibus tempor tortor. Arcu donec vehicula aliquam. Justo ipsum, venenatis ac non. Lorem mus mi vel cum gravida tincidunt. Mattis metus rutrum amet justo. Scelerisque leo torquent volutpat eu, aenean, nullam. Porttitor netus pellentesque justo. Id etiam molestie per. Tortor vel in sed parturient, orci nec vel ut senectus leo et congue libero faucibus porta scelerisque. Suscipit netus montes magnis ut. Placerat nisl pretium mus malesuada pellentesque \autoref{b_plot}.
 
 <!-- figure 2 -->
-```{r, barplot, fig.align="center", out.width="75%", fig.cap = "Geographic distribution of journals. \\label{b_plot}"}
+```{r, barplot, fig.align="center", out.width="75%", fig.cap = "Distribusi geografik. \\label{b_plot}"}
+
+ggplot(data = df, mapping = aes(x = forcats::fct_infreq(origin))) +
+  geom_bar() +
+  theme_bw() +
+  labs(x = "", y = "Number of Journals")
+
+```
+
+Placerat nisl pretium mus malesuada pellentesque \autoref{b_plot1}.
+
+<!-- figure 2 -->
+```{r, barplot1, fig.align="center", out.width="75%", fig.cap = "Distribusi geografik. \\label{b_plot1}"}
 
 ggplot(data = df, mapping = aes(x = forcats::fct_infreq(origin))) +
   geom_bar() +
